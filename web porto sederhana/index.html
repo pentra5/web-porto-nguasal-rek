@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Muhammad Lovell Al-Faraby</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="profile-photo">
+                <img src="asset/lovell-0.jpg" alt="Muhammad Lovell Al-Faraby">
+                <h2 class="name">Muhammad Lovell</h2>
+                <p class="title">COOking at PT. MENCARI CINTA SEJATI BROK</p>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#profile" class="tab-link active" onclick="showTab('profile')">Profile</a></li>
+                    <li><a href="#hobby" class="tab-link" onclick="showTab('hobby')">Hobby</a></li>
+                    <li><a href="#skill" class="tab-link" onclick="showTab('skill')">Skill</a></li>
+                    <li><a href="#project" class="tab-link" onclick="showTab('project')">Project</a></li>
+                    <li><a href="#contact" class="tab-link" onclick="showTab('contact')">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="content">
+            <section id="profile" class="section tab-content active">
+                <div class="section-header">
+                    <h1>Profile</h1>
+                    <div class="line"></div>
+                </div>
+                <div class="card">
+                    <p><strong>Name:</strong> Muhammad Lovell Al-Faraby</p>
+                    <p><strong>Date of Birth:</strong> 30 March 2006</p>
+                    <p><strong>Place of Birth:</strong> Jakarta</p>
+                    <p><strong>Company:</strong> PT. MENCARI CINTA SEJATI BROK</p>
+                    <p><strong>Position:</strong> COOking</p>
+                </div>
+            </section>
+
+            <section id="hobby" class="section tab-content">
+                <div class="section-header">
+                    <h1>Hobby</h1>
+                    <div class="line"></div>
+                </div>
+                <div class="card">
+                    <ul>
+                        <li>berlari di air</li>
+                        <li>berenang di aspal</li>
+                        <li>like foto cewe cantik</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="skill" class="section tab-content">
+                <div class="section-header">
+                    <h1>Skill</h1>
+                    <div class="line"></div>
+                </div>
+                <div class="card">
+                    <ul>
+                        <li>Web Developing mengaselole</li>
+                        <li>IoT toi </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="project" class="section tab-content">
+                <div class="section-header">
+                    <h1>Project</h1>
+                    <div class="line"></div>
+                </div>
+                <div class="card">
+                    <ul class="timeline">
+                        <li>Project 1: menamatkan onepiece (2023)</li>
+                        <li>Project 2: menamatkan mayat (2024)</li>
+                        <li>Project 3: apalah cok (2021)</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="contact" class="section tab-content">
+                <div class="section-header">
+                    <h1>Contact</h1>
+                    <div class="line"></div>
+                </div>
+                <div class="card">
+                    <form id="contact-form" action="mailto:necpentra@gmail.com" method="post" enctype="text/plain">
+                        <label for="name">woi tulis nama lu:</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="email">Email jangan lupa:</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="message">tulis suka suka lah:</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+
+                        <button type="submit">kirim kirim CUIH</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; oi web gue chuki.</p>
+    </footer>
+
+    <style>
+        /* Blue Eclipse Color Scheme */
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(45deg, #2f3a56, #1c1f2e);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex-grow: 1;
+        }
+
+        .header, .content {
+            border: 2px solid #0066cc;  /* Same border for header and content */
+            border-radius: 10px;         /* Add border radius to both */
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            width: 100%;
+            background-color: #1c1f2e;
+            box-sizing: border-box;
+        }
+
+        .profile-photo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .profile-photo img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border: 3px solid #fff;
+        }
+
+        .name {
+            font-size: 1.5em;
+            margin: 15px 0 5px;
+            color: #fff;
+        }
+
+        .title {
+            font-size: 1em;
+            font-weight: 300;
+            color: #ccc;
+        }
+
+        .nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            margin-left: auto;
+            gap: 20px;
+        }
+
+        .nav ul li {
+            margin: 0;
+        }
+
+        .nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 600;
+            padding: 15px;
+            display: block;
+            border-radius: 5px;
+            background-color: #0066cc;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .nav ul li a.active {
+            background-color: #003f7f;
+        }
+
+        .nav ul li a:hover {
+            background-color: #003f7f;
+            transform: scale(1.05);
+        }
+
+        .content {
+            flex-grow: 1;
+            padding: 50px;
+            overflow-y: scroll;
+            background-color: #fff;
+            color: #333;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center content */
+        }
+
+        .section {
+            margin-bottom: 50px;
+            width: 100%; /* Make sure content is centered */
+            max-width: 900px; /* Prevent too wide sections */
+        }
+
+        .card {
+            background: #fafafa;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            color: #333;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+        }
+
+        .section-header h1 {
+            font-size: 1.8em;
+            margin-right: 15px;
+            color: #333;
+        }
+
+        .line {
+            flex-grow: 1;
+            height: 3px;
+            background-color: #0066cc;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        ul li {
+            line-height: 1.8;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #0066cc;
+            color: white;
+            width: 100%;
+            position: relative;
+            bottom: 0;
+        }
+
+        /* Form styling */
+        #contact-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #contact-form label {
+            margin: 10px 0 5px;
+        }
+
+        #contact-form input, #contact-form textarea {
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        #contact-form button {
+            padding: 10px 20px;
+            background-color: #0066cc;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #contact-form button:hover {
+            background-color: #003f7f;
+        }
+
+        /* Hide inactive sections */
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                padding: 0;
+                width: 100%;
+            }
+
+            .header {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .profile-photo {
+                margin-bottom: 15px;
+            }
+
+            .nav ul {
+                flex-direction: column;
+                margin-top: 15px;
+                gap: 10px;
+                width: 100%;
+                align-items: center;
+            }
+
+            .content {
+                padding: 20px;
+                margin-left: 0;
+                width: 100%;
+                align-items: center; /* Ensure content is centered */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .name {
+                font-size: 1.2em;
+            }
+
+            .section-header h1 {
+                font-size: 1.4em;
+            }
+
+            .card {
+                padding: 15px;
+            }
+
+            #contact-form input, #contact-form textarea {
+                font-size: 14px;
+            }
+        }
+    </style>
+
+    <script>
+        function showTab(tabId) {
+            const sections = document.querySelectorAll('.tab-content');
+            sections.forEach(section => section.classList.remove('active'));
+
+            const navLinks = document.querySelectorAll('.tab-link');
+            navLinks.forEach(link => link.classList.remove('active'));
+
+            const activeSection = document.getElementById(tabId);
+            activeSection.classList.add('active');
+
+            const activeLink = document.querySelector(`[href="#${tabId}"]`);
+            activeLink.classList.add('active');
+        }
+    </script>
+</body>
+</html>
